@@ -5,16 +5,26 @@
 
 class Mobiles
 
-  def initialize(list)
+def initialize(list)
+	list = list.chomp
+	@mobiles = {
+	"samsung" => '10,000',
+	"motorola" => '15,000',
+	"apple" => '60,000',
+	"moto" => '14000',
+	"nexus" => '16000',
+	"lenovo" => '12000',
+	"nokia" => '5000',
+	"sony" => '8000',
+	"iball" => '1000',
+	"karbon" => '2000'
+	} 
+	puts @mobiles[list]
   end
 
 end
 
-@mobiles = {
-  :samsung: '10,000',
-  motorola: => '15,000',
-  "apple": '60,000'
-}
 
-brand = 'Input From the user'
-rate = Mobile.new(brand)
+
+brand = gets
+Mobiles.new(brand)
